@@ -11,6 +11,6 @@
       "@babel/plugin-proposal-object-rest-spread"
     ],
     "ignore": [
-      "servers/assets"
+      "dist"
     ]
 }

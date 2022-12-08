@@ -1,1 +1,1 @@
-export const data=()=>{return"Hello World!"};
+"use strict";var _express=_interopRequireDefault(require("express"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}const App=(0,_express.default)();App.listen(0,()=>console.log(`App Running Random Port!!!`));
