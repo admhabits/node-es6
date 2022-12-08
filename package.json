@@ -1,0 +1,25 @@
+{
+  "name": "create-xpro-app",
+  "version": "1.0.0",
+  "description": "Express Proffesional Configuration With Linux Development",
+  "main": "dist",
+  "scripts": {
+    "build": "babel --minified --no-comments servers -d dist",
+    "start": "nodemon --watch 'servers' --exec 'npm run build'"
+  },
+  "keywords": [
+    "Express"
+  ],
+  "author": "Alam Wibowo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "dotenv": "^16.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
