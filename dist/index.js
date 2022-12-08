@@ -1,1 +1,1 @@
-"use strict";var _express=_interopRequireDefault(require("express"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}const App=(0,_express.default)();App.listen(0,()=>console.log(`App Running Random Port!!!`));
+"use strict";var _config=_interopRequireDefault(require("./config"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}const App=_config.default.dynamicServer.setApp();const Api=_config.default.dynamicRouter.setApi();App.listen(3000,()=>console.log(`Development Packages is Running!`));

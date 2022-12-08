@@ -1,6 +1,11 @@
-import express from 'express';
+import Configuration from './config';
 
-const App = express();
+const App = Configuration.dynamicServer.setApp();
+const Api = Configuration.dynamicRouter.setApi();
 
-App.listen(0, () => console.log( `App Running Random Port!!!`))
+Api.get('/', (req, res) => {
+    res.send({ message: "Hello World!" });
+});
 
+App.use('/api', Api);
+App.listen(3000, () => console.log( `Development Packages is Running!`));
