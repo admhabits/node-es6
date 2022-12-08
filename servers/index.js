@@ -1,11 +1,14 @@
 import Configuration from './config';
+import http from 'http';
+import { Api } from './apis';
+
+Configuration.setServerFunc();
+Configuration.setRouterFunc();
 
 const App = Configuration.dynamicServer.setApp();
-const Api = Configuration.dynamicRouter.setApi();
 
-Api.get('/', (req, res) => {
-    res.send({ message: "Hello World!" });
-});
+App.use('/api/v1', Api);
 
-App.use('/api', Api);
-App.listen(3000, () => console.log( `Development Packages is Running!`));
+const Server = http.createServer(App);
+
+Server.listen(3000, () => console.log( `Development Packages is Running!`));

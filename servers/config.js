@@ -1,10 +1,7 @@
 import express from "express";
 
 export default class Configuration {
-    constructor({ type }){
-        this.type = type;
-    }
-
+    
     static dynamicServer = [];
     static dynamicRouter = [];
 
@@ -16,6 +13,3 @@ export default class Configuration {
         this.dynamicRouter[method] = () => express.Router();
     }
 }
-
-Configuration.setServerFunc();
-Configuration.setRouterFunc();
